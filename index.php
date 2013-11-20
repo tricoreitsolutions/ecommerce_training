@@ -1,5 +1,5 @@
 <?php
-	echo "hello world";
+	echo "hello world - message updated"; //done by tricore.dev20
 	//test update by tricore.dev20
 	echo "hello again";
 	// test update by tricore.dev18
