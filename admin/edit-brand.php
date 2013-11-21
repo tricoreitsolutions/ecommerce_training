@@ -8,8 +8,6 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
 	if(isset($_REQUEST['id'])){
 		$getBrandData="SELECT * FROM brand_master WHERE `id`='".$_REQUEST['id']."'";
 		$result=mysql_query($getBrandData) or die('Error'.mysql_error());
@@ -29,8 +27,7 @@
 	}
 ?>
 
-
-<body>
+<title>Edit Brand</title>
 	<form action="" method="POST" enctype="multipart/form-data"> 
 		<div>
 			<ul class="breadcrumb">
@@ -74,9 +71,9 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
-</html>	
-    
+</div>
+</div>
+</div>
 <?php include('include/footer.php'); ?>
 
 

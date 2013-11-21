@@ -7,15 +7,12 @@
 */
 	include_once('include/authenticate.php');
 	include_once('include/headers.php'); 
-	include_once('include/connection.php');
-	include_once('include/functions.php');
 		if(isset($_REQUEST['id'])){
 			delete_category_detail($_REQUEST['id']);
 		}
 	?>
-
+<title>Category</title>
 	<form>
-	
 		<div>
 			<ul class="breadcrumb">
 				<li>
@@ -29,15 +26,18 @@
 		<div class="row-fluid">			
 			<div class="box span12">
 				<div class="box-header well" data-original-title>
-					<h2><i class="icon-user"></i>Categories</h2>
+					<h2><i class="icon-user"></i>Category</h2>
 						<div class="box-icon">						
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
 				</div>
 					
 			</div>
 			<div class="box-content">
-				<a class="btn btn-success" href="add-category.php" style="float:right;margin:0 0 -24px 0"><i class="icon-zoom-in icon-white"></i>Add Category</a>
-				<!--<a href="add-category.php"><input type="button" class="btn btn-primary" name="submit"  value="Add Category" style="float:right;margin:0 0 -24px 0"></a>-->
+				<div class="add">
+					<a class="btn btn-success" href="add-category.php">
+						<i class="icon-zoom-in icon-white"></i>Add Category
+					</a>
+				</div>
 				<table class="table table-striped table-bordered bootstrap-datatable datatable">
 					<thead>
 						<th>Name</th>	
@@ -79,5 +79,8 @@
 		</div><!--/span-->	
 		</div><!--/row-->						  
 	</form>
+</div>
+</div>
+</div>
 <?php include_once('include/footer.php'); ?>
 

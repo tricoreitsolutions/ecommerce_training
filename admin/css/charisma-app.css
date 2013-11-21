@@ -401,6 +401,7 @@ width: 50px;
 .dataTables_filter input, .dataTables_length select {
 display: inline-block;
 margin-bottom: 0;
+margin-top: -4px;
 }
 ul.ajax-loaders li{
 display:inline-block;

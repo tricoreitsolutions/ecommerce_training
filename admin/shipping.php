@@ -7,10 +7,8 @@
 */
 	include_once('include/authenticate.php');
 	include_once('include/headers.php'); 
-	include_once('include/connection.php');
-	include_once('include/functions.php');
-	?>
-<body>
+?>
+<title>Shipping</title>
 	<form>
 		<div>
 			<ul class="breadcrumb">
@@ -37,7 +35,11 @@
 				</div>
 				
 				<div class="box-content">
-					<a class="btn btn-success" href="add-shipping.php" style="float:right;margin:0 0 -24px 0"><i class="icon-zoom-in icon-white"></i>Add Shipping</a>
+					<div class="add">
+						<a class="btn btn-success" href="add-shipping.php">
+							<i class="icon-zoom-in icon-white"></i>Add Shipping
+						</a>
+					</div>
 					<table class="table table-striped table-bordered bootstrap-datatable datatable">
 					  <thead>
 						<tr>
@@ -68,10 +70,11 @@
 				   </table>            
 				</div>
 			</div><!--/span-->	
-		</div><!--/row-->
-	  </div>						  
+		</div><!--/row-->					  
 	</form>
-	</body>
+</div>
+</div>
+</div>
        
 <?php include_once('include/footer.php'); ?>
 

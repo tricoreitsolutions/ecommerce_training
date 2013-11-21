@@ -20,13 +20,22 @@ nav,
 section {
   display: block;
 }
+.dataTables_filter{
+	width:250px;
+	float:right;
+}
 .dataTables_filter label{
-	margin: 0 0 0 130px;
-    width: 100px;
+	margin: 0 0 0 0;
+    width: 55px;
 }
 .dataTables_filter label input{
 	margin: -36px 0 0 56px;
-    width: 200px;
+    width: 150px;
+}
+.add{
+	float:right;
+	width:155px;
+	margin:-4px 0 9px 0;
 }
 audio,
 canvas,
@@ -4463,4 +4472,10 @@ i[class^="icon-"] {
 .invisible {
   visibility: hidden;
 }
-
+/*** Footer ***/
+#footer {
+				/* 30/16 */
+				width:auto;
+				height:50px;
+				padding-left:29%;
+			}

@@ -8,8 +8,6 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
 	if(isset($_POST['submit'])){
 		$addTaxData=insert_tax_data($_POST);
 		if(isset($addTaxData)){
@@ -52,7 +50,6 @@
 			});	
 	</script>
 
-<body>
 	<form action="" method="POST" enctype="multipart/form-data" id="add-tax"> 
 		<div>
 			<ul class="breadcrumb">
@@ -99,9 +96,9 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
-
-    
+</div>
+</div>
+</div>
 <?php include('include/footer.php'); ?>
 
 

@@ -1,20 +1,15 @@
 <?php 
 /*
-	File Name 		:- index.php
-	Description		:- home page
+	File Name 		:- user-list.php
+	Description		:- to view edit and delete users information
 	Developer ID	:- tricore.dev20
 	Date			:- 18/11/2013 
 */
 
 	include_once('include/authenticate.php');
 	include_once('include/headers.php'); 
-	include_once('include/connection.php');
-	include_once('include/functions.php');
-	?>
-
-<html>
-<head></head>
-<body>
+?>
+<title>User List</title>
 	<form>
 		<div>
 			<ul class="breadcrumb">
@@ -22,7 +17,7 @@
 					<a href="#">Home</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="index.php">Dashboard</a>
+					<a href="user-list.php">User Management</a>
 				</li>
 			</ul>
 		</div>
@@ -89,10 +84,10 @@
 				</div>
 			</div><!--/span-->
 		</div><!--/row-->
-	</div>	  
  </form>
-</body>
-</html>
+</div>
+</div>
+</div>
 		  
        
 <?php include_once('include/footer.php'); ?>

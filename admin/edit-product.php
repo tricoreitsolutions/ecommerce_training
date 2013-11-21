@@ -9,9 +9,6 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
-	
 	if(isset($_REQUEST['id'])){
 		$getProductData="SELECT * FROM product_master WHERE `id`='".$_REQUEST['id']."'";
 		$result=mysql_query($getProductData) or die('Error'.mysql_error());
@@ -90,8 +87,7 @@
 		header("location:product.php");
 	}
 ?>
-	<title>Edit Product</title>
-<body>
+<title>Edit Product</title>
 	<form action="" method="POST" enctype="multipart/form-data"> 
 	  <div>
 			<ul class="breadcrumb">
@@ -280,7 +276,7 @@
 					<label class="control-label" for="focusedInput">Status</label>
 					<div class="controls">
 						<input class="input-xlarge focused" id="focusedInput" type="text" value="<?php echo $getProductRow['status'];?>" name="status">
-					</div>
+				</div>
 			  </div>
 		  <div class="form-actions">
 			<button type="submit" class="btn btn-primary" id="submit" name="submit">Save changes</button>
@@ -291,7 +287,7 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
-
-    
+</div>
+</div>
+</div>    
 <?php include('include/footer.php'); ?>

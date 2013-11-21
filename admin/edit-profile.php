@@ -6,10 +6,8 @@
 	Date			:- 18/11/2013 
 */
 	ob_start();
-	include_once('authenticate.php');
-	include_once('headers.php');
-	include_once('connection.php');
-	include_once('functions.php');
+	include_once('include/authenticate.php');
+	include_once('include/headers.php');
 	if(isset($_REQUEST['id'])){
 			$getAdminData="SELECT * FROM admin_master WHERE `id`='".$_REQUEST['id']."'";
 			$result=mysql_query($getAdminData) or die('Error'.mysql_error());
@@ -46,10 +44,10 @@
 										if(move_uploaded_file($_FILES["file"]["tmp_name"],
 									  "images/" .$imageName))
 										{
-											$dest="images/smallimages/";
-											if(file_exists("../images/smallimages/".$existImageName))
+											$dest="images/";
+											if(file_exists("../images/".$existImageName))
 											{
-												unlink("../images/smallimages/".$existImageName);
+												unlink("../images/".$existImageName);
 											}
 											$width=150;
 											$height=150;
@@ -89,8 +87,7 @@
 		}
 	}
 ?>
-
-<body>
+<title>Edit Admin Details</title>
 	<form action="" method="POST" enctype="multipart/form-data"> 
 		<div>
 			<ul class="breadcrumb">
@@ -98,7 +95,7 @@
 					<a href="#">Home</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="profile.php">Profile</a>
+					<a href="profile.php">Dashboard</a>
 				</li>
 			</ul>
 		</div>
@@ -165,7 +162,7 @@
 				<div class="control-group">
 					<label class="control-label">Change image</label>
 					<div class="controls">
-						<img src="images/smallimages/<?php echo $row['image'] ?>">
+						<img src="images/<?php echo $row['image'] ?>">
 						<input class="input-file uniform_on" id="fileInput" type="file" name="file">
 					</div>
 			    </div>
@@ -183,7 +180,9 @@
 		</div><!--/span-->	
 	</div><!--/row-->			
 </form>
-</body>
-</html>	
+</div>
+</div>
+</div>
     
-<?php include('footer.php'); ?>
+<?php include_once('include/footer.php'); ?>
+

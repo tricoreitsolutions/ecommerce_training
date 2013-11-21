@@ -62,7 +62,6 @@
 			});	
 	</script>
 
-<body>
 	<form action="" method="POST" enctype="multipart/form-data" id="add-category"> 
 		<div>
 			<ul class="breadcrumb">
@@ -108,7 +107,9 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
+</div>
+</div>
+</div>
 
     
 <?php include('include/footer.php'); ?>

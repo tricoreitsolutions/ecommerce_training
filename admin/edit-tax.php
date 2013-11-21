@@ -9,10 +9,7 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
 	if(isset($_REQUEST['id'])){
-		
 		$getTaxData="SELECT * FROM tax_master WHERE `id`='{$_REQUEST['id']}'";
 		$result=mysql_query($getTaxData) or die('Error'.mysql_error());
 		$row=mysql_fetch_array($result);	
@@ -60,7 +57,7 @@
 				});
 			});	
 </script>
-<body>
+<title>Edit Tax</title>
 	<form action="" method="POST" enctype="multipart/form-data" id="edit-tax"> 
 		<div>
 			<ul class="breadcrumb">

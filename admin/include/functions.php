@@ -224,6 +224,17 @@
 	}
 	function update_admin_data($data)
 	{
+		/*$tablename
+		[firstname] = ssss
+		[lastname] = ssss
+		$keys = array_keys($_POST)
+		$keys = array_keys($_POST)
+		$str = ''
+		for(keys)
+		{
+			$sql.= "`".$keys[i]."` = ".$values[$i] ."  ";
+		}
+		*/
 		$updateQuery="UPDATE `admin_master` SET `firstname`='".$data['firstName']."',`lastname`='".$data['lastName']."',`email`='".$data['email']."',`gender`='".$data['gender']."',`address`='".$data['address']."',`phone_no`='".$data['phoneNo']."',`image`='".$data['image']."',`status`='".$data['status']."' WHERE `id`='".$data['id']."'";
 		$resultUpdateQuery=mysql_query($updateQuery);
 		confirm_query($resultUpdateQuery);

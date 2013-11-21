@@ -7,13 +7,11 @@
 */
 	include_once('include/authenticate.php');
 	include_once('include/headers.php'); 
-	include_once('include/connection.php');
-	include_once('include/functions.php');
 	if(isset($_REQUEST['id'])){
 		delete_product_detail($_REQUEST['id']);
 	}
 	?>
-<body>
+<title>Product</title>
 	<form>
 		<div>
 			<ul class="breadcrumb">
@@ -34,7 +32,11 @@
 					</div>
 				</div>
 				<div class="box-content">
-					<a class="btn btn-success" href="add-product.php" style="float:right;margin:0 0 -24px 0"><i class="icon-zoom-in icon-white"></i>Add Product</a>
+					<div class="add">
+						<a class="btn btn-success" href="add-product.php">
+							<i class="icon-zoom-in icon-white"></i>Add Product
+						</a>
+					</div>
 					<table class="table table-striped table-bordered bootstrap-datatable datatable">
 					  <thead>
 						<tr>
@@ -116,9 +118,10 @@
 				   </table>            
 				</div>
 			</div><!--/span-->	
-		</div><!--/row-->
-	  </div>						  
+		</div><!--/row-->					  
 	</form>
-	</body>
+</div>
+</div>	
+</div>		
 <?php include_once('include/footer.php'); ?>
 

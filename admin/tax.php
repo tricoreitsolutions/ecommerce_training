@@ -7,10 +7,8 @@
 */
 	include_once('include/authenticate.php');
 	include_once('include/headers.php'); 
-	include_once('include/connection.php');
-	include_once('include/functions.php');
-	?>
-<body>
+?>
+<title>Tax</title>
 	<form>
 		<div>
 			<ul class="breadcrumb">
@@ -37,7 +35,11 @@
 				</div>
 				
 				<div class="box-content">
-					<a class="btn btn-success" href="add-tax.php" style="float:right;margin:0 0 -24px 0"><i class="icon-zoom-in icon-white"></i>Add tax</a>
+					<div class="add">
+						<a class="btn btn-success" href="add-tax.php">
+							<i class="icon-zoom-in icon-white"></i>Add tax
+						</a>
+					</div>
 					<table class="table table-striped table-bordered bootstrap-datatable datatable">
 					  <thead>
 						<tr>
@@ -69,7 +71,9 @@
 		</div><!--/row-->
 	  </div>						  
 	</form>
-	</body>
+</div>
+</div>
+</div>
        
 <?php include_once('include/footer.php'); ?>
 

@@ -8,8 +8,6 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
 	if(isset($_REQUEST['id'])){
 		$id=$_REQUEST['id'];	
 		if(isset($_POST['submit'])){
@@ -28,7 +26,7 @@
 	}
 ?>
 
-<body>
+<title>Edit User Details</title>
 	<form action="" method="POST"> 
 		<div>
 			<ul class="breadcrumb">
@@ -136,7 +134,7 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
-</html>	
-    
+</div>
+</div>
+</div>
 <?php include('include/footer.php'); ?>

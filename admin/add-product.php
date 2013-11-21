@@ -8,9 +8,7 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
-		
+
 	if(isset($_POST['submit'])){
 		print_r($_POST['category']);exit;
 		$addProductData=insert_product_data($_POST);
@@ -173,7 +171,6 @@
 			});	
 	</script>
 
-<body>
 	<form action="add-product.php" method="POST" enctype="multipart/form-data" id="add-product"> 
 	  <div>
 			<ul class="breadcrumb">
@@ -383,7 +380,8 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
+</div>
+</div>
+</div>
 
-    
 <?php include('include/footer.php'); ?>

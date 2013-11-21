@@ -8,8 +8,7 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
+
 	if(isset($_POST['submit'])){
 		$addShippingData=insert_shipping_data($_POST);
 		
@@ -62,7 +61,6 @@
 			});	
 	</script>
 
-<body>
 	<form action="" method="POST" enctype="multipart/form-data" id="add-shipping"> 
 		<div>
 			<ul class="breadcrumb">
@@ -129,9 +127,9 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
-
-    
+</div>
+</div>
+</div>
 <?php include('include/footer.php'); ?>
 
 

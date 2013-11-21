@@ -9,8 +9,7 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
+
 	if(isset($_REQUEST['id'])){
 		$getShippingData="SELECT * FROM shipping_master WHERE `id`='".$_REQUEST['id']."'";
 		$result=mysql_query($getShippingData) or die('Error'.mysql_error());
@@ -68,7 +67,7 @@
 				});
 			});	
 </script>
-<body>
+<title>Edit Shipping</title>
 	<form action="" method="POST" enctype="multipart/form-data" id="edit-shipping"> 
 		<div>
 			<ul class="breadcrumb">
@@ -134,8 +133,9 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
-</html>	
+</div>
+</div>
+</div>
     
 <?php include('include/footer.php'); ?>
 

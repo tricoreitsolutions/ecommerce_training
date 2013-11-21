@@ -7,13 +7,11 @@
 */
 	include_once('include/authenticate.php');
 	include_once('include/headers.php'); 
-	include_once('include/connection.php');
-	include_once('include/functions.php');
 		if(isset($_REQUEST['id'])){
 			delete_brand_detail($_REQUEST['id']);
 		}
 	?>
-<body>
+<title>Brand</title>
 	<form>
 		<div>
 			<ul class="breadcrumb">
@@ -28,19 +26,18 @@
 			<div class="row-fluid">	
 					
 				<div class="box span12">
-					
-					
-					
 					<div class="box-header well" data-original-title>
 						<h2><i class="icon-user"></i>Brand</h2>
 						<div class="box-icon">						
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
 					</div>
-					
 				</div>
-				
 				<div class="box-content">
-					<a class="btn btn-success" href="add-brand.php" style="float:right;margin:0 0 -24px 0"><i class="icon-zoom-in icon-white"></i>Add Brand</a>
+					<div class="add">
+						<a class="btn btn-success" href="add-brand.php">
+							<i class="icon-zoom-in icon-white"></i>Add Brand
+						</a>
+					</div>
 					<table class="table table-striped table-bordered bootstrap-datatable datatable">
 					  <thead>
 						<tr>
@@ -82,7 +79,9 @@
 		</div><!--/row-->
 	  </div>						  
 	</form>
-	</body>
+</div>
+</div>
+</div>
        
 <?php include_once('include/footer.php'); ?>
 

@@ -8,8 +8,6 @@
 	ob_start();
 	include_once('include/authenticate.php');
 	include_once('include/headers.php');
-	include_once('include/connection.php');
-	include_once('include/functions.php');
 	if(isset($_REQUEST['id'])){
 		$getCategoryData="SELECT * FROM category_master WHERE `id`='".$_REQUEST['id']."'";
 		$result=mysql_query($getCategoryData) or die('Error'.mysql_error());
@@ -90,8 +88,7 @@
 		}
 	}
 ?>
-
-<body>
+<title>Edit Category</title>
 	<form action="" method="POST" enctype="multipart/form-data"> 
 		<div>
 			<ul class="breadcrumb">
@@ -187,8 +184,9 @@
 			
 	</div><!--/row-->			
 </form>
-</body>
-</html>	
+</div>
+</div>
+</div>
     
 <?php include('include/footer.php'); ?>
 

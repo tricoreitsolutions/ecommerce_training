@@ -5,6 +5,8 @@
 	Developer ID	:- tricore.dev20
 	Date			:- 18/11/2013 
 */
+	include_once('include/connection.php');
+	include_once('include/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,15 +14,8 @@
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<!-- The styles -->
 	<link id="bs-css" href="../admin/css/bootstrap-cerulean.css" rel="stylesheet">
-	<style type="text/css">
-	  body {
-		padding-bottom: 40px;
-	  }
-	  .sidebar-nav {
-		padding: 9px 0;
-	  }
-	</style>
 	<?php include_once('style.php');?>
+	<!--Jquery -->
 	<?php include_once('jquery.php');?>
 </head>
 <body>
@@ -54,8 +49,8 @@
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="profile.php">Profile</a></li>
-						<li class="divider"></li>
+						<!--<li><a href="profile.php">Profile</a></li>
+						<li class="divider"></li>-->
 						<li><a href="log-out.php">Logout</a></li>
 					</ul>
 				</div>
@@ -73,7 +68,7 @@
 						<li><a class="ajax-link" href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
 						<li class="nav-header hidden-tablet">Users</li>
 							<li><a class="ajax-link" href="user-list.php"><i class="icon-align-justify"></i><span class="hidden-tablet"> User Management</span></a></li>
-						<li class="nav-header hidden-tablet">Categories</li>
+						<li class="nav-header hidden-tablet">Category</li>
 							<li><a class="ajax-link" href="category.php"><i class="icon-align-justify"></i><span class="hidden-tablet"> Category Management</span></a></li>
 						<li class="nav-header hidden-tablet">Product</li>
 							<li><a class="ajax-link" href="product.php"><i class="icon-align-justify"></i><span class="hidden-tablet"> Product Management</span></a></li>
